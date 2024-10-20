@@ -1,0 +1,22 @@
+@import 'base';
+@import 'mixin';
+
+#single-news {
+    .section-inner {
+        .single-news-inner {
+            p {
+                padding-block: 12px;
+                &.title {
+                    font-size: 1.25rem;
+                    border-bottom: double 6px #E6D8B3;
+                }
+                &.date {
+                    text-align: left;
+                }
+                &.text {
+                    text-align: left;
+                }
+            }
+        }
+    }
+}

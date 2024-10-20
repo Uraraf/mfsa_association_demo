@@ -1,0 +1,12 @@
+@import 'base';
+@import 'mixin';
+
+footer {
+    padding-block: 16px;
+    text-align: center;
+    font-size: 0.875rem;
+    background-color: $bg;
+    @include tab {
+        font-size: 0.625rem;
+    }
+}

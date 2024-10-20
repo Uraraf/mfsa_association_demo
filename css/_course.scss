@@ -1,0 +1,92 @@
+@import 'base';
+@import 'mixin';
+
+#page_course {
+    .section-inner {
+        .course-items {
+            display: flex;
+            align-items: stretch;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            @include tab {
+                flex-direction: column;
+            }
+            li.course-item {
+                width: 45%;
+                @include tab {
+                    width: 100%;
+                    margin-bottom: 24px;
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+                &:nth-child(n+3) {
+                    margin-top: 32px;
+                    @include tab {
+                        margin-top: 0;
+                    }
+                }
+                img {
+                    width: 100%;
+                    margin-bottom: 16px;
+                }
+            }
+        }
+    }
+}
+
+#instructors {
+    .section-inner {
+        ul.instructor-items {
+            display: flex;
+            align-items: stretch;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            position: relative;
+            @include tab {
+                flex-direction: column;
+            }
+            li.instructor-item {
+                width: 45%;
+                padding: 24px;
+                @include tab {
+                    width: 100%;
+                }
+                img {
+                    height: 300px;
+                    height: 300px;
+                    object-fit: contain;
+                    margin-bottom: 16px;
+                }
+                .instructor-text {
+                    text-align: left;
+                    p {
+                        &.name {
+                            color: $pink;
+                            margin-bottom: 8px;
+                        }
+                        &.course {
+                            margin-bottom: 8px;
+                        }
+                        &.sns {
+                            color: $pink;
+                            margin-top: 8px;
+                        }
+                    }
+                }
+            }
+            &::after {
+                content: '';
+                width: 1px;
+                height: 100%;
+                background-color: $pink;
+                position: absolute;
+                top: 0;
+                left: 50%;
+                @include tab {
+                    display: none;
+                }
+            }
+        }
+    }
+}

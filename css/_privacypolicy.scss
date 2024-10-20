@@ -1,0 +1,22 @@
+@import 'base';
+@import 'mixin';
+
+#page_privacypolicy {
+    .section-inner {
+        ul.privacypolicy-inner {
+            li.privacypolicy-item {
+                margin-bottom: 16px;
+                text-align: left;
+                p.head {
+                    margin-bottom: 8px;
+                }
+                ol {
+                    li {
+                        list-style: inside;
+                        list-style-type: decimal;
+                    }
+                }
+            }
+        }
+    }
+}
